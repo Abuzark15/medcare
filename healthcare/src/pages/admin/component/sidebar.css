@@ -1,0 +1,47 @@
+/* Default styles for larger screens */
+.wrapper {
+    display: flex;
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-250px); /* Sidebar is hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    z-index: 1000; /* Make sure it's above other content */
+  }
+  
+  /* Navigation inside sidebar */
+  .sidebar-nav {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  /* Show sidebar when 'sidebar-open' class is added */
+  .wrapper.sidebar-open #sidebar {
+    transform: translateX(0); /* Sidebar slides in */
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {  /* Updated breakpoint for mobile */
+    /* Hide sidebar by default */
+    #sidebar {
+      transform: translateX(-250px); /* Sidebar is off-canvas by default */
+    }
+  
+    /* Apply when sidebar is open */
+    .wrapper.sidebar-open #sidebar {
+      transform: translateX(0); /* Sidebar slides in */
+    }
+  
+    /* Make sure the sidebar toggle button is visible */
+    #sidebar-toggle {
+      display: block;
+    }
+  }
+  

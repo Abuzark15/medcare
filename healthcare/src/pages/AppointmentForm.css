@@ -1,0 +1,237 @@
+/* Ensure container is scrollable */
+.time-slots-container {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;   /* Enable vertical scroll */
+  margin-top: 20px;    /* Add top margin for spacing */
+}
+
+/* Flexbox for displaying time slots */
+.time-slot-list {
+  display: flex;
+  flex-wrap: wrap;     /* Allow items to wrap to the next line */
+  gap: 10px;           /* Set gap between the slots */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Style for individual time slot buttons */
+.time-slot-btn {
+  width: calc(25% - 10px); /* Adjust width for 4 slots per row */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center; /* Center text in buttons */
+}
+
+/* Hover effect on time slots */
+.time-slot-btn:hover {
+  background-color: #dcdcdc;
+}
+
+/* Style for selected time slot */
+.time-slot-btn.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* For appointment form container */
+.services__appoinment {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Max width for the form */
+}
+
+/* Calendar icon styles */
+.datepicker-icon {
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size */
+}
+
+/* Datepicker wrapper */
+.datepicker__item {
+  position: relative;
+  display: inline-block;
+}
+
+/* Adjusting position of DatePicker */
+.react-datepicker-wrapper {
+  display: block;
+}
+
+.react-datepicker__input-container {
+  display: inline-block;
+}
+
+.react-datepicker {
+  position: absolute;
+  top: 100%;  /* Adjust position below the input */
+  left: 0;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+/* Style for buttons (Next, Previous, Book) */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+button:disabled {
+  background-color: #dcdcdc; /* Disabled state */
+  cursor: not-allowed;
+}
+
+/* Styles for Tracker (step navigation) */
+.tracker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tracker-step {
+  font-size: 16px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tracker-step.completed {
+  color: #4caf50; /* Green color for completed steps */
+}
+
+.tracker-step .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  color: #4caf50;
+}
+
+  
+
+  
+  .navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .previous-btn {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .previous-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+
+  /* Step Tracker Container */
+.step-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  /* Step container */
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #dcdcdc; /* Default color for inactive steps */
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  /* Active state for steps */
+  .step.active {
+    color: #007bff; /* Active color */
+    transform: scale(1.1); /* Slightly enlarge active step */
+  }
+  
+  /* Icon style */
+  .step svg {
+    color: inherit; /* Inherit color from the step */
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+  
+  /* Step line between steps */
+  .step-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #dcdcdc; /* Default line color */
+    z-index: -1;
+    transition: background-color 0.3s;
+  }
+  
+  /* Active state for step line */
+  .step-line.active {
+    background-color: #007bff; /* Active line color */
+  }
+  
+  /* Adjust position for lines between steps */
+  .step-line:nth-child(2) {
+    left: 20%; /* Adjust line position */
+  }
+  
+  .step-line:nth-child(4) {
+    left: 50%;
+  }
+  
+  .step-line:nth-child(6) {
+    left: 80%;
+  }
+  
+  /* Add margin to the last step */
+  .step:last-child {
+    margin-right: 0;
+  }
+  
+  /* Make the lines take up full width if needed */
+  .step-line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .step-tracker {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* For smaller screens, lines will span full width */
+    .step-line {
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  
+  

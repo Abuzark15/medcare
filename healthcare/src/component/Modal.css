@@ -1,0 +1,24 @@
+/* Modal.css */
+.modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .datepicker__item {
+    position: relative;
+  }
+  
+  .datepicker__item i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  

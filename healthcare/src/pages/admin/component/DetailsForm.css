@@ -1,0 +1,147 @@
+.form-container {
+  max-width: 1000px;  /* Increased max-width for desktop screens */
+  margin: 20px auto;
+  padding: 30px;  /* Increased padding for more space */
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.doctor-details-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Change to 3 columns for large screens */
+  gap: 20px;
+  align-items: start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+label {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+input[type="text"]:disabled {
+  background-color: #f1f1f1;
+}
+
+.profile-picture {
+  max-width: 140px;
+  max-height: 140px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+/* Buttons - separate from the grid */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.form-buttons .back-button {
+  align-self: flex-start;  /* Align Back button to the bottom-left */
+}
+
+.form-buttons .accept-button, 
+.form-buttons .reject-button {
+  align-self: flex-end;  /* Align Accept and Reject buttons to the bottom-right */
+}
+
+button {
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.back-button {
+  background-color: #ddd;
+  color: #333;
+}
+
+.reject-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.accept-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Make the form responsive */
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 900px;  /* Slightly reduce the width on smaller desktops */
+  }
+
+  .doctor-details-form {
+    grid-template-columns: 1fr 1fr;  /* Switch to two columns on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-details-form {
+    grid-template-columns: 1fr;  /* One column for smaller screens */
+  }
+
+  .form-buttons {
+    flex-direction: column;  /* Stack the buttons vertically on small screens */
+    align-items: center;
+  }
+
+  button {
+    width: 100%;  /* Make buttons full-width on mobile */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input[type="text"] {
+    font-size: 13px;
+  }
+
+  .profile-picture {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
